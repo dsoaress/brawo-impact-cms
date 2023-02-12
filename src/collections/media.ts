@@ -10,6 +10,9 @@ export const Media: CollectionConfig = {
     plural: 'Des médias',
     singular: 'médias'
   },
+  access: {
+    read: () => true
+  },
   fields: [
     {
       name: 'alt',
