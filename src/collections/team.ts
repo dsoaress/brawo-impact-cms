@@ -4,7 +4,8 @@ export const Team: CollectionConfig = {
   slug: 'team',
   admin: {
     useAsTitle: 'name',
-    description: "Membres de l'équipe"
+    description: "Membres de l'équipe",
+    defaultColumns: ['name', 'role', 'image', 'order']
   },
   labels: {
     plural: 'Équipe',

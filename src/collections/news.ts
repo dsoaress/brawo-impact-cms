@@ -6,7 +6,8 @@ export const News: CollectionConfig = {
   slug: 'news',
   admin: {
     useAsTitle: 'title',
-    description: 'Actualités'
+    description: 'Actualités',
+    defaultColumns: ['title', 'author', 'published', 'publishedAt']
   },
   labels: {
     plural: 'Actualités',
