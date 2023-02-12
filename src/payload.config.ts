@@ -5,6 +5,7 @@ import computeBlurhash from 'payload-blurhash-plugin'
 import cloudinaryPlugin from 'payload-cloudinary-plugin/dist/plugins'
 
 import { Media } from './collections/media'
+import { News } from './collections/news'
 import { Team } from './collections/team'
 import { Users } from './collections/users'
 
@@ -17,7 +18,7 @@ export default buildConfig({
   admin: {
     user: Users.slug
   },
-  collections: [Users, Team, Media],
+  collections: [Users, Team, News, Media],
   routes: {
     admin: '/app'
   },
@@ -26,6 +27,6 @@ export default buildConfig({
     outputFile: path.resolve(__dirname, 'payload-types.ts')
   },
   graphQL: {
-    schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql')
+    disable: true
   }
 })
