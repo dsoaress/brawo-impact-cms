@@ -4,7 +4,12 @@ export const Users: CollectionConfig = {
   slug: 'users',
   auth: true,
   admin: {
-    useAsTitle: 'email'
+    useAsTitle: 'email',
+    description: 'Utilisateurs du site'
+  },
+  labels: {
+    plural: 'Utilisateurs',
+    singular: 'utilisateur'
   },
   access: {
     read: () => true
