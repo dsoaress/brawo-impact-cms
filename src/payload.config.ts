@@ -6,6 +6,7 @@ import cloudinaryPlugin from 'payload-cloudinary-plugin/dist/plugins'
 
 import { Media } from './collections/media'
 import { News } from './collections/news'
+import { Pages } from './collections/pages'
 import { Team } from './collections/team'
 import { Users } from './collections/users'
 
@@ -18,7 +19,7 @@ export default buildConfig({
   admin: {
     user: Users.slug
   },
-  collections: [Users, Team, News, Media],
+  collections: [Users, Team, News, Pages, Media],
   routes: {
     admin: '/app'
   },
