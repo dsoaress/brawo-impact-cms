@@ -1,6 +1,6 @@
-FROM node:18 as base
+FROM node:18 AS base
 
-FROM base as builder
+FROM base AS builder
 
 WORKDIR /home/node/app
 COPY package.json yarn.lock ./
@@ -9,7 +9,7 @@ COPY . .
 RUN yarn install
 RUN yarn build
 
-FROM base as runtime
+FROM base AS runtime
 
 ARG PORT
 
